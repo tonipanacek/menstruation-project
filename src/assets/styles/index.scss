@@ -1,5 +1,6 @@
 $blue: darkslateblue;
 $bg-body: antiquewhite;
+$yellow: #FDDE14;
 
 html,
 body {
@@ -9,7 +10,11 @@ body {
 }
 
 body {
-  background-color: $bg-body;
+  background-color: $yellow;
+  background-image: url('../images/landingpage.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
