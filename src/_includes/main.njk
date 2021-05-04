@@ -1,0 +1,7 @@
+{% extends './default.njk' %}
+
+{% block main %}
+<main class="{{ mainClass }}" style="background-image: url('{{ bgImage }}')">
+  {{ content | safe }}
+</main>
+{% endblock %}

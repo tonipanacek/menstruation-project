@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Apoc Light";
+  src: url("/assets/fonts/ApocLC-Light.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Apoc Revelations Italic";
+  src: url("/assets/fonts/ApocLC-RevelationsItalic.woff") format("woff");
+  font-style: italic;
+  font-weight: 300;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "RadioGrotesk";
+  src: url("/assets/fonts/RadioGrotesk-Light.ttf") format("ttf"),
+       url("/assets/fonts/RadioGrotesk-Light.otf") format("otf"),
+       url("/assets/fonts/RadioGrotesk-Light.woff") format("woff");
+
+  font-style: normal;
+  font-weight: 300;
+  font-display: block;
+}
