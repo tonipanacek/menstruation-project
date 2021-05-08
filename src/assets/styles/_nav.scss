@@ -69,7 +69,7 @@ nav {
     text-align: left;
     box-shadow: $box-shadow;
     right: 0;
-    top: 250px;
+    top: 145px;
     @include respond-to('large') {
       top: 160px;
       right: unset;

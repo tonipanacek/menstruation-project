@@ -1,8 +1,10 @@
 .main-contact {
-  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  @include respond-to('large') {
+    height: 80vh;
+  }
 }
 
 .form {
@@ -42,7 +44,10 @@
   .form-group {
     display: flex;
     justify-content: space-between;
-
+    flex-direction: column;
+    @include respond-to('large') {
+      flex-direction: row;
+    }
   }
   .submit-area {
     width: 100%;
