@@ -1,8 +1,12 @@
+@import "variables";
 @import "breakpoints";
-@import "colors";
 @import "fonts";
 @import "video";
 @import "home";
+@import "nav";
+@import "about";
+@import "contact";
+
 
 html,
 body {
@@ -14,10 +18,34 @@ body {
 body {
   background-color: black;
   font-family: "RadioGrotesk";
-}
-
-
-main {
-  background-size: cover;
   min-height: 100vh;
+  // overflow: hidden;
 }
+
+.contact {
+  background-image: url('https://res.cloudinary.com/tonipanoche/image/upload/w_auto,dpr_auto,q_auto/v1618923382/menstruation-project/mp_background_contact.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.imprint {
+  background-image: url('https://res.cloudinary.com/tonipanoche/image/upload/w_auto,dpr_auto,q_auto/v1618923382/menstruation-project/mp_background_imprint.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+.privacy {
+  background-image: url('https://res.cloudinary.com/tonipanoche/image/upload/w_auto,dpr_auto,q_auto/v1618923382/menstruation-project/mp_background_imprint.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
+.about {
+  background-image: url('https://res.cloudinary.com/tonipanoche/image/upload/w_auto,dpr_auto,q_auto/v1618923382/menstruation-project/mp_background_about.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+
+}
+
