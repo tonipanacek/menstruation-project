@@ -1,4 +1,4 @@
-.main-about {
+.main-about, .main-imprint, .main-privacy {
   width: 80%;
   margin: 0 auto;
   font-size: 40px;
@@ -10,5 +10,14 @@
     overflow: scroll;
     padding: 0;
     height: 70vh;
+  }
+}
+
+.main-imprint, .main-privacy {
+  border: 2px solid $grey;
+  border-radius: 15px;
+  .content {
+    padding: 2rem;
+    word-break: break-word;
   }
 }

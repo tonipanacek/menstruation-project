@@ -2,7 +2,7 @@
 
 {% block main %}
   {% include './header.njk' %}
-  <main class="{{ mainClass }}" style="background-image: url('{{ bgImage }}')">
+  <main class="main-{{ mainClass }} content">
     {{ content | safe }}
   </main>
 {% endblock %}
