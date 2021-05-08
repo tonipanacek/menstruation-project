@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   @include respond-to('large') {
-    height: 80vh;
+    min-height: 75vh;
   }
 }
 
@@ -45,7 +45,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    @include respond-to('large') {
+    @include respond-to('small') {
       flex-direction: row;
     }
   }

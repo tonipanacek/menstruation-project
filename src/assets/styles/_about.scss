@@ -1,8 +1,14 @@
 .main-about {
   width: 80%;
   margin: 0 auto;
-  font-size: 48px;
+  font-size: 40px;
   color: $grey;
-  overflow: scroll;
-  height: 64vh;
+  padding-bottom: 2rem;
+  height: auto;
+  @include respond-to('small') {
+    font-size: 48px;
+    overflow: scroll;
+    padding: 0;
+    height: 70vh;
+  }
 }
