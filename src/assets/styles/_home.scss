@@ -1,8 +1,7 @@
-.connect-div {
+.btn-div {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 75vh;
   a {
     color: $pink;
     text-decoration: none;
@@ -11,8 +10,15 @@
     padding: .5rem .75rem;
     border: 2px solid $pink;
     border-radius: 15px;
-    box-shadow: 2px 2px 5px 1px rgb(141, 141, 141);
+    box-shadow: $box-shadow;
   }
+}
+
+.about-div {
+  height: 73vh;
+}
+.connect-div {
+  height: 38vh;
 }
 
 

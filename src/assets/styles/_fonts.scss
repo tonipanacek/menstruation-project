@@ -9,7 +9,7 @@
 @font-face {
   font-family: "Apoc Revelations Italic";
   src: url("/assets/fonts/ApocLC-RevelationsItalic.woff") format("woff");
-  font-style: italic;
+  font-style: normal;
   font-weight: 300;
   font-display: block;
 }
@@ -24,3 +24,13 @@
   font-weight: 300;
   font-display: block;
 }
+
+
+.apoc-light {
+  font-family: 'Apoc Light';
+}
+
+.apoc-revelations {
+  font-family: 'Apoc Revelations Italic'
+}
+

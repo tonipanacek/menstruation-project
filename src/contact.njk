@@ -1,7 +1,21 @@
 ---
 layout: main
 title: Menstruation Project - Contact
-bgImage: 'https://res.cloudinary.com/tonipanoche/image/upload/w_auto,dpr_auto,q_auto/v1618923382/menstruation-project/mp_background_contact.jpg'
+bgImage: 'https://res.cloudinary.com/tonipanoche/image/upload/v1620400406/menstruation-project/mp_background_contact.jpg'
 mainClass: contact
+pageTitle: connect
+fontColor: rgb(119, 255, 198);
 ---
 
+<div class="form form-contact">
+  <form action="/" name="contact" method="post" data-netlify="true">
+    <div class="form-group">
+      <input type="text" name="name" placeholder="name" class="form-input">
+      <input type="email" name="email" required placeholder="email" class="form-input">
+    </div>
+    <textarea type="textarea" name="message" placeholder="message" class="form-input form-message" rows="5"></textarea>
+    <div class="submit-area">
+      <button type="submit" class="submit-button">Send</button>
+    </div>
+  </form>
+</div>

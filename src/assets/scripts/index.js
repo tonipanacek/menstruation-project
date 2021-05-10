@@ -1,1 +1,3 @@
-const foo = (() => Promise.resolve().then(() => console.log('Hello world')))();
+import { handleNavMenu } from './nav-menu.js';
+
+handleNavMenu();
