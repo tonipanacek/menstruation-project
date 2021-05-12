@@ -11,7 +11,11 @@
     padding: 0;
     height: 70vh;
   }
+  a {
+    color: $maroon;
+  }
 }
+
 
 .main-imprint, .main-privacy {
   border: 2px solid $grey;
