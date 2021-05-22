@@ -1,0 +1,13 @@
+{% extends './default.njk' %}
+
+{% block main %}
+  <div class="bg-video">
+    <video autoplay muted loop playsinline>
+      <source src="{{ loopVideo }}" type="video/mp4">
+    </video>
+  </div>
+
+  <main class="main-{{ mainClass }}">
+    {{ content | safe }}
+  </main>
+{% endblock %}

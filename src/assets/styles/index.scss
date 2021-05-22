@@ -6,7 +6,8 @@
 @import "nav";
 @import "about";
 @import "contact";
-
+@import "digital_experience";
+@import "current_affairs";
 
 html,
 body {
@@ -28,9 +29,16 @@ body {
   }
 }
 
+.hidden {
+  display: none;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
 .contact {
   background-image: url('https://res.cloudinary.com/tonipanoche/image/upload/w_auto,dpr_auto,q_auto/v1618923382/menstruation-project/mp_background_contact.jpg');
-
 }
 
 .imprint {
@@ -45,3 +53,6 @@ body {
   background-image: url('https://res.cloudinary.com/tonipanoche/image/upload/w_auto,dpr_auto,q_auto/v1618923382/menstruation-project/mp_background_about.jpg');
 }
 
+.digital-experience {
+  background-image: url('https://res.cloudinary.com/tonipanoche/image/upload/w_auto,dpr_auto,q_auto/v1621008920/menstruation-project/Sample_Digital_Experience_Home_Page.png');
+}

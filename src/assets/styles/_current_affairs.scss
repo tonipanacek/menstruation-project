@@ -1,0 +1,87 @@
+.main-current-affairs {
+  height: 100vh;
+  .room {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 5rem;
+  }
+  .artist-info {
+    font-family: 'Apoc Light';
+  }
+  .content {
+    background: white;
+    padding: 2rem;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 66ch;
+  }
+  .left {
+    align-self: flex-start;
+  }
+  .room-box button {
+    cursor: pointer;
+    background: inherit;
+    border: 1px solid $mint;
+    border-radius: 50%;
+    outline: none;
+    font-family: Apoc Light;
+    font-size: 2rem;
+    padding: 1rem;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    color: $mint;
+  }
+  .area-1 {
+    position: absolute;
+    top: 4%;
+    left: 30%;
+    height: 17vh;
+    width: 17vh;
+  }
+  .area-2 {
+    position: absolute;
+    top: 13%;
+    left: 20%;
+    height: 17vh;
+    width: 17vh;
+  }
+  .area-3 {
+    position: absolute;
+    top: 25%;
+    left: 7%;
+    height: 17vh;
+    width: 17vh;
+  }
+  .area-4 {
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    height: 17vh;
+    width: 17vh;
+  }
+  .area-5 {
+    position: absolute;
+    bottom: 30%;
+    right: 34%;
+    height: 17vh;
+    width: 17vh;
+  }
+  .area-6 {
+    position: absolute;
+    bottom: 45%;
+    right: 11%;
+    height: 17vh;
+    width: 17vh;
+  }
+  .area-7 {
+    position: absolute;
+    top: 25%;
+    right: 48%;
+    height: 17vh;
+    width: 17vh;
+  }
+}

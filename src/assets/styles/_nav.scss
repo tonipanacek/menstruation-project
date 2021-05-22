@@ -16,6 +16,19 @@ nav {
       flex: 1;
     }
   }
+  .box:nth-child(2) {
+    flex: 100%;
+    order: 3;
+    @include respond-to('small') {
+      flex: 2;
+      order: unset;
+    }
+  }
+  .box:nth-child(3) {
+    @include respond-to('large') {
+      position: relative;
+    }
+  }
   .home-btn {
     text-decoration: none;
   }
@@ -34,19 +47,6 @@ nav {
     color: $mint;
     margin: 0;
     padding: 0;
-  }
-  .box:nth-child(2) {
-    flex: 100%;
-    order: 3;
-    @include respond-to('small') {
-      flex: 1;
-      order: unset;
-    }
-  }
-  .box:nth-child(3) {
-    @include respond-to('large') {
-      position: relative;
-    }
   }
   .menu-btn {
     font-family: 'Apoc Revelations Italic';
@@ -72,7 +72,8 @@ nav {
     top: 145px;
     @include respond-to('large') {
       top: 160px;
-      right: unset;
+      right: 50px;
+      width: 14ch;
       padding: 4rem 2rem;
     }
     ul {
