@@ -19,6 +19,7 @@
     border-radius: 15px;
     width: 66ch;
     box-shadow: $box-shadow;
+    font-size: 1.25rem;
   }
   .left {
     align-self: flex-start;
@@ -81,6 +82,9 @@
     position: absolute;
     bottom: 30%;
     right: 34%;
+    &-content {
+      width: 60ch;
+    }
   }
   .area-6 {
     position: absolute;
@@ -91,6 +95,9 @@
     position: absolute;
     top: 25%;
     right: 48%;
+    &-content {
+      width: 45ch;
+    }
   }
 }
 

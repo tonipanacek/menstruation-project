@@ -101,3 +101,29 @@ nav {
 .hidden {
   display: none;
 }
+
+#cornered {
+  ul {
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: $pink;
+      font-family: 'Apoc Revelations Italic';
+      font-size: 2rem;
+      padding: .5rem 1rem;
+      border: 2px solid $pink;
+      box-shadow: $box-shadow;
+      border-radius: 15px;
+    }
+    li:first-child {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+    }
+    li:nth-child(2) {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+    }
+  }
+}
