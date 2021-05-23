@@ -1,0 +1,359 @@
+.main {
+  height: 100vh;
+  .room {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 5rem;
+  }
+  .artist-info {
+    font-family: 'Apoc Light';
+    .title {
+      font-family: "Apoc Revelations Italic";
+    }
+  }
+  .content {
+    padding: 2rem;
+    border-radius: 15px;
+    width: 66ch;
+    box-shadow: $box-shadow;
+  }
+  .left {
+    align-self: flex-start;
+  }
+
+  .room-box {
+    height: 17vh;
+    width: 17vh;
+    button {
+      cursor: pointer;
+      background: inherit;
+      border: 1px solid $mint;
+      border-radius: 50%;
+      outline: none;
+      font-family: Apoc Light;
+      font-size: 2rem;
+      padding: 1rem;
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      color: $mint;
+    }
+  }
+}
+
+// CURRENT AFFAIRS
+.main-current-affairs {
+  .content {
+    background: $light-affairs;
+    color: $dark-affairs;
+    border: 2px solid $dark-affairs;
+  }
+  .room-box {
+    button {
+      border: 2px solid $light-affairs;
+      color: $light-affairs;
+    }
+  }
+  .area-1 {
+    position: absolute;
+    top: 4%;
+    left: 30%;
+  }
+  .area-2 {
+    position: absolute;
+    top: 13%;
+    left: 20%;
+  }
+  .area-3 {
+    position: absolute;
+    top: 25%;
+    left: 7%;
+  }
+  .area-4 {
+    position: absolute;
+    top: 45%;
+    left: 25%;
+  }
+  .area-5 {
+    position: absolute;
+    bottom: 30%;
+    right: 34%;
+  }
+  .area-6 {
+    position: absolute;
+    bottom: 45%;
+    right: 11%;
+  }
+  .area-7 {
+    position: absolute;
+    top: 25%;
+    right: 48%;
+  }
+}
+
+// ANATOMY
+
+.main-anatomy {
+  .content {
+    background: $light-anatomy;
+    color: $dark-anatomy;
+    border: 2px solid $dark-anatomy;
+  }
+  .room-box {
+    button {
+      border: 2px solid $dark-anatomy;
+      color: $dark-anatomy;
+    }
+  }
+  .area-1 {
+   position: absolute;
+   right: 18%;
+   top: 47%;
+  }
+  .area-2 {
+   position: absolute;
+   top: 15%;
+   left: 36%;
+  }
+  .area-3 {
+   position: absolute;
+   left: 15%;
+   bottom: 17%;
+  }
+  .area-4 {
+   position: absolute;
+   bottom: 11%;
+   left: 46%;
+  }
+}
+
+// LEAKING BODIES
+
+.main-leaking-bodies {
+  .content {
+    background: $light-bodies;
+    color: $dark-bodies;
+    border: 2px solid $dark-bodies;
+  }
+  .room-box {
+    button {
+      border: 2px solid $dark-bodies;
+      color: $dark-bodies;
+    }
+  }
+  .area-1 {
+   position: absolute;
+   left: 39%;
+   top: 19%;
+  }
+  .area-2 {
+   position: absolute;
+   top: 41%;
+   left: 13%;
+  }
+  .area-3 {
+   position: absolute;
+   left: 38%;
+   bottom: 13%;
+  }
+  .area-4 {
+   position: absolute;
+   bottom: 22%;
+   right: 16%;
+  }
+  .area-5 {
+    position: absolute;
+    right: 26%;
+    top: 17%;
+  }
+}
+
+// RED TENT
+
+.main-red-tent {
+  .content {
+    background: $light-tent;
+    color: $dark-tent;
+    border: 2px solid $dark-tent;
+  }
+  .room-box {
+    button {
+      border: 2px solid $light-tent;
+      color: $light-tent;
+    }
+  }
+  .area-1 {
+   position: absolute;
+   left: 8%;
+   bottom: 27%;
+  }
+  .area-2 {
+   position: absolute;
+   bottom: 33%;
+   left: 27%;
+  }
+  .area-3 {
+   position: absolute;
+   left: 46%;
+   bottom: 34%;
+  }
+  .area-3-content {
+    width: 55ch;
+  }
+  .area-4 {
+   position: absolute;
+   bottom: 31%;
+   right: 27%;
+  }
+  .area-5 {
+    position: absolute;
+    right: 10%;
+    bottom: 24%;
+  }
+}
+
+// VOLCANO
+
+.main-volcano {
+  .content {
+    background: $dark-volcano;
+    color: $light-volcano;
+    border: 2px solid $light-volcano;
+  }
+  .room-box {
+    button {
+      border: 2px solid $light-volcano;
+      color: $light-volcano;
+    }
+  }
+  .area-1 {
+   position: absolute;
+   left: 39%;
+   top: 19%;
+  }
+  .area-2 {
+   position: absolute;
+   top: 41%;
+   left: 13%;
+  }
+  .area-3 {
+   position: absolute;
+   left: 38%;
+   bottom: 13%;
+  }
+  .area-4 {
+   position: absolute;
+   bottom: 22%;
+   right: 16%;
+  }
+  .area-5 {
+    position: absolute;
+    right: 26%;
+    top: 17%;
+  }
+}
+
+// MAP
+.main-map {
+  .content {
+    padding: .75rem 1.25rem;
+    width: auto;
+    background: $light-map;
+    color: $dark-map;
+    border: 2px solid $dark-map;
+    font-family: "Apoc Light";
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    // p {
+
+    //   color: inherit;
+    // }
+  }
+  .area-volcano {
+    position: absolute;
+    top: 34%;
+    left: 18%;
+    width: 20vh;
+    height: 20vh;
+    &-content {
+      position: absolute;
+      top: 25%;
+      left: 9%;
+    }
+  }
+  .area-affairs {
+    position: absolute;
+    width: 20vh;
+    height: 20vh;
+    top: 24%;
+    left: 41%;
+    &-content {
+      position: absolute;
+      top: 10%;
+      left: 40%;
+    }
+  }
+  .area-anatomy {
+    position: absolute;
+    width: 20vh;
+    height: 20vh;
+    top: 24%;
+    right: 30%;
+    &-content {
+      position: absolute;
+      top: 19%;
+      right: 20%;
+    }
+  }
+  .area-tent {
+    position: absolute;
+    width: 20vh;
+    height: 20vh;
+    right: 16%;
+    top: 43%;
+    &-content {
+      position: absolute;
+      right: 4%;
+      top: 38%;
+    }
+  }
+  .area-directory {
+    position: absolute;
+    width: 20vh;
+    height: 20vh;
+    bottom: 20%;
+    right: 22%;
+    &-content {
+      position: absolute;
+      bottom: 15%;
+      right: 13%;
+    }
+  }
+  .area-cycles {
+    position: absolute;
+    width: 20vh;
+    height: 20vh;
+    bottom: 21%;
+    right: 41%;
+    &-content {
+      position: absolute;
+      bottom: 10%;
+      right: 35%;
+    }
+  }
+  .area-bodies {
+    position: absolute;
+    width: 20vh;
+    height: 20vh;
+    bottom: 24%;
+    left: 28%;
+    &-content {
+      position: absolute;
+      left: 15%;
+      bottom: 16%;
+    }
+  }
+}
