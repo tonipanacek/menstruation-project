@@ -8,6 +8,14 @@
 @import "contact";
 @import "digital_experience";
 @import "rooms";
+@import "hello";
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 html,
 body {

@@ -1,4 +1,4 @@
-nav {
+.main-nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -73,8 +73,9 @@ nav {
     @include respond-to('large') {
       top: 160px;
       right: 50px;
-      width: 14ch;
+      width: 18ch;
       padding: 4rem 2rem;
+      z-index: 2;
     }
     ul {
       list-style: none;
@@ -105,13 +106,15 @@ nav {
 #cornered {
   ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
     a {
       text-decoration: none;
-      color: $pink;
+      // color: $pink;
       font-family: 'Apoc Revelations Italic';
       font-size: 2rem;
       padding: .5rem 1rem;
-      border: 2px solid $pink;
+      // border: 2px solid $pink;
       box-shadow: $box-shadow;
       border-radius: 15px;
     }
@@ -127,3 +130,53 @@ nav {
     }
   }
 }
+
+
+.map {
+  #cornered a {
+    background: $light-map;
+    color: $dark-map;
+    border: 2px solid $dark-map;
+  }
+}
+
+.volcano {
+  #cornered a {
+    background: $light-volcano;
+    color: $dark-volcano;
+    border: 2px solid $dark-volcano;
+  }
+}
+
+.anatomy {
+  #cornered a {
+    background: $light-anatomy;
+    color: $dark-anatomy;
+    border: 2px solid $dark-anatomy;
+  }
+}
+
+.current-affairs {
+  #cornered a {
+    background: $light-affairs;
+    color: $dark-affairs;
+    border: 2px solid $dark-affairs;
+  }
+}
+
+.leaking-bodies {
+  #cornered a {
+    background: $light-bodies;
+    color: $dark-bodies;
+    border: 2px solid $dark-bodies;
+  }
+}
+
+.red-tent {
+  #cornered a {
+    background: $dark-tent;
+    color: $light-tent;
+    border: 2px solid $light-tent;
+  }
+}
+
