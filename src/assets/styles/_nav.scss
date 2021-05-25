@@ -103,18 +103,16 @@
   display: none;
 }
 
-#cornered {
+.cornered {
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
     a {
       text-decoration: none;
-      // color: $pink;
       font-family: 'Apoc Revelations Italic';
       font-size: 2rem;
       padding: .5rem 1rem;
-      // border: 2px solid $pink;
       box-shadow: $box-shadow;
       border-radius: 15px;
     }
@@ -122,11 +120,41 @@
       position: absolute;
       top: 30px;
       left: 30px;
+      z-index: 5;
+      a {
+        color: $grey;
+        border: 2px solid $grey;
+      }
     }
     li:nth-child(2) {
       position: absolute;
       top: 30px;
       right: 30px;
+      z-index: 5;
+      a {
+        color: $pink;
+        border: 2px solid $pink;
+      }
+    }
+    li:nth-child(3) {
+      position: absolute;
+      left: 30px;
+      bottom: 30px;
+      z-index: 5;
+      a {
+        color: $red;
+        border: 2px solid $red;
+      }
+    }
+    li:nth-child(4) {
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      z-index: 5;
+      a {
+        color: $mint;
+        border: 2px solid $mint;
+      }
     }
   }
 }

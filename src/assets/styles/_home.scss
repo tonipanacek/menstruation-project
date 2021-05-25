@@ -1,7 +1,10 @@
-.btn-div {
+.main-home {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  img {
+    width: 30vw;
+  }
   a {
     color: $pink;
     text-decoration: none;
@@ -14,27 +17,48 @@
   }
 }
 
-.about-div {
-  height: 77vh;
-}
-.connect-div {
-  height: 38vh;
-}
-
-
 footer {
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
-  height: 15vh;
+  height: 20vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  .gdpr, a {
-    text-transform: uppercase;
+  .social-icons {
+    margin-bottom: 1rem;
+    a {
+      padding-right: 1rem;
+    }
+    img {
+      height: 30px;
+      width: 30px;
+    }
+  }
+  .gdpr {
     color: $mint;
-    // text-decoration: none;
-    font-size: 24px;
+    a {
+      text-transform: uppercase;
+      color: $mint;
+      font-size: 18px;
+    }
+  }
+  .sponsors {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 65ch;
+    margin-top: 1rem;
+    img:first-child {
+      width: 200px;
+    }
+    img:nth-child(2) {
+      height: 50px;
+    }
+    img:nth-child(3) {
+      width: 200px;
+    }
   }
 }
