@@ -23,7 +23,8 @@ const hideInfoBoxes = (box) => {
 const onCardClick = (e) => {
   const parentRoomBox = e.currentTarget;
   const hoverBtnDiv = parentRoomBox.firstElementChild;
-  const content = document.querySelector(`.${parentRoomBox.classList[1]}-content`);
+  const content = document.querySelector('.art-content');
+  content.classList.remove('hidden');
 }
 
 const handleBoxHovers = () => {
