@@ -3,7 +3,7 @@
   <head>
     {% include "head.njk" %}
   </head>
-  <body class="{{ mainClass }}">
+  <body class="{{ mainClass }}" id="{{ mainClass }}">
   {% block main %}
     {{ content | safe }}
   {% endblock %}

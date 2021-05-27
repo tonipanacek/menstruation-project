@@ -1,12 +1,23 @@
 {% extends './default.njk' %}
 
 {% block main %}
-  <nav id="cornered">
+  {% if mainClass == 'map' %}
+    <nav class="cornered">
     <ul>
       <li><a href="/" class="home-btn">MP</a></li>
-      <li><a href="/rooms/map">map</a></li>
+      <li><a href="/about">about</a></li>
+      <li><a href="/artists">artists</a></li>
+      <li><a href="/connect">connect</a></li>
     </ul>
   </nav>
+  {% else %}
+    <nav class="cornered">
+      <ul>
+        <li><a href="/" class="home-btn">MP</a></li>
+        <li><a href="/rooms/map">meta-view</a></li>
+      </ul>
+    </nav>
+  {% endif %}
   {% if entryVideo %}
   <div class="bg-video" id="entry-video">
     <video autoplay muted playsinline>
