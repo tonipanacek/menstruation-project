@@ -60,7 +60,7 @@
     }
   }
   .art-content {
-    padding: 2rem;
+    padding: 3rem;
     border-radius: 15px;
     box-shadow: $box-shadow;
     font-size: 1.35rem;
@@ -82,6 +82,11 @@
         width: 35px;
         cursor: pointer;
       }
+    }
+    .one-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 

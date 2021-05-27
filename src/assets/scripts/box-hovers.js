@@ -7,7 +7,8 @@ const initVimeo = (vimeoID, divID, content) => {
   const videoName = divID;
   const player = new Player(content, {
     id: vimeoID,
-    autoplay: true
+    autoplay: true,
+    controls: false
   });
 
   player.on('ended', () => {
@@ -40,18 +41,28 @@ const onCardClick = (e) => {
   const hoverBtnDiv = parentRoomBox.firstElementChild;
   const divID = parentRoomBox.classList[1];
   const content = document.querySelector(`.${divID}-art-piece`);
-  console.log(content)
   const vimeoID = hoverBtnDiv.dataset.vimeo;
+  const imagePath = hoverBtnDiv.dataset.imagePath;
   let closeBtn;
   let player;
   if (content) {
+    if (vimeoID) {
+      player = initVimeo(vimeoID, divID, content);
+    } else if (imagePath) {
+      const baseClUrl = "https://res.cloudinary.com/tonipanoche/image/upload/v1622148106/menstruation-project/"
+      const imageHTML = `<img class="one-image" src="${baseClUrl + imagePath}" alt="">`;
+      const existingImage = content.querySelector('.one-image');
+      if (!existingImage) {
+        content.insertAdjacentHTML('beforeend', imageHTML);
+      }
+    }
     content.classList.remove('hidden');
+    if (player) {
+      player.getPaused().then((paused) => {
+        if (paused) { player.play()}
+      })
+    }
     closeBtn = content.querySelector('.close');
-  }
-  if (vimeoID) {
-    player = initVimeo(vimeoID, divID, content);
-  }
-  if (closeBtn) {
     closeBtn.addEventListener('click', () => {
       content.classList.add('hidden');
       if (player) {
