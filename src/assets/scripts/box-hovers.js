@@ -1,5 +1,20 @@
+import Player from '@vimeo/player';
+
 const room = document.querySelector('.room');
 const boxes = document.querySelectorAll('.room-box');
+
+const initVimeo = (vimeoID, divID, content) => {
+  const videoName = divID;
+  const player = new Player(content, {
+    id: vimeoID,
+    autoplay: true
+  });
+
+  player.on('ended', () => {
+    console.log('video ended')
+  })
+  return player;
+}
 
 const showInfoBoxes = (box) => {
   const button = box.querySelector('.btn-watch');
@@ -23,8 +38,27 @@ const hideInfoBoxes = (box) => {
 const onCardClick = (e) => {
   const parentRoomBox = e.currentTarget;
   const hoverBtnDiv = parentRoomBox.firstElementChild;
-  const content = document.querySelector('.art-content');
-  content.classList.remove('hidden');
+  const divID = parentRoomBox.classList[1];
+  const content = document.querySelector(`.${divID}-art-piece`);
+  console.log(content)
+  const vimeoID = hoverBtnDiv.dataset.vimeo;
+  let closeBtn;
+  let player;
+  if (content) {
+    content.classList.remove('hidden');
+    closeBtn = content.querySelector('.close');
+  }
+  if (vimeoID) {
+    player = initVimeo(vimeoID, divID, content);
+  }
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      content.classList.add('hidden');
+      if (player) {
+        player.pause();
+      }
+    })
+  }
 }
 
 const handleBoxHovers = () => {
