@@ -452,6 +452,33 @@
 
 // MAP
 .main-map {
+  .mobile-view {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 33%;
+    .text-content {
+      width: 80%;
+      padding: 1rem;
+      font-size: 24px;
+      font-family: 'Apoc Light';
+      background: $grey;
+      color: $purple;
+      border: 2px solid $purple;
+      border-radius: 15px;
+      text-align: center;
+    }
+    @include respond-to('large') {
+      display: none;
+    }
+  }
+  .room {
+    display: none;
+    @include respond-to('large') {
+      display: flex;
+    }
+  }
   .content {
     padding: .75rem 1.25rem;
     width: auto;

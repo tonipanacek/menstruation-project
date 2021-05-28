@@ -57,10 +57,9 @@ const hideInfoBoxes = (box) => {
   const area = box.classList[1];
   const content = document.querySelector(`.${area}-content`);
   content.classList.add('hidden');
-  if (button) {
+  if (button && box.id !== 'info-box') {
     button.classList.add('hidden');
-    button.classList.remove('clicked');
-  };
+  }
 }
 
 const onCardClick = (e) => {

@@ -193,6 +193,13 @@
   }
 }
 
+#about-link {
+  right: 37%;
+  @include respond-to('large') {
+    right: 30px;
+  }
+}
+
 #map {
   .cornered a {
     background: $light-map;
