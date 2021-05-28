@@ -1,3 +1,4 @@
+@import "three-dots/sass/three-dots.scss";
 @import "variables";
 @import "breakpoints";
 @import "fonts";
@@ -5,8 +6,17 @@
 @import "home";
 @import "nav";
 @import "about";
+@import "artists";
 @import "contact";
+@import "rooms";
+@import "hello";
 
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 html,
 body {
@@ -28,9 +38,41 @@ body {
   }
 }
 
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+
+.not-visible {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+.home {
+  background-image: url("https://res.cloudinary.com/tonipanoche/image/upload/v1621935316/menstruation-project/mp_background_home-min.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.map {
+  background-image: url('https://res.cloudinary.com/tonipanoche/image/upload/w_auto,dpr_auto,q_auto/v1622217624/menstruation-project/Sample_Digital_Experience_Home_Page.png');
+  @include respond-to('large') {
+    background-image: unset;
+  }
+}
 .contact {
   background-image: url('https://res.cloudinary.com/tonipanoche/image/upload/w_auto,dpr_auto,q_auto/v1618923382/menstruation-project/mp_background_contact.jpg');
-
 }
 
 .imprint {
@@ -45,3 +87,6 @@ body {
   background-image: url('https://res.cloudinary.com/tonipanoche/image/upload/w_auto,dpr_auto,q_auto/v1618923382/menstruation-project/mp_background_about.jpg');
 }
 
+.artists {
+  background-image: url('https://res.cloudinary.com/tonipanoche/image/upload/w_auto,dpr_auto,q_auto/v1620400400/menstruation-project/mp_background_artists.jpg')
+}

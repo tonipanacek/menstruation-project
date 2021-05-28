@@ -1,4 +1,4 @@
-nav {
+.main-nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -14,6 +14,19 @@ nav {
     justify-content: center;
     @include respond-to('small') {
       flex: 1;
+    }
+  }
+  .box:nth-child(2) {
+    flex: 100%;
+    order: 3;
+    @include respond-to('small') {
+      flex: 2;
+      order: unset;
+    }
+  }
+  .box:nth-child(3) {
+    @include respond-to('large') {
+      position: relative;
     }
   }
   .home-btn {
@@ -34,19 +47,6 @@ nav {
     color: $mint;
     margin: 0;
     padding: 0;
-  }
-  .box:nth-child(2) {
-    flex: 100%;
-    order: 3;
-    @include respond-to('small') {
-      flex: 1;
-      order: unset;
-    }
-  }
-  .box:nth-child(3) {
-    @include respond-to('large') {
-      position: relative;
-    }
   }
   .menu-btn {
     font-family: 'Apoc Revelations Italic';
@@ -70,9 +70,11 @@ nav {
     box-shadow: $box-shadow;
     right: 0;
     top: 145px;
+    z-index: 2;
     @include respond-to('large') {
       top: 160px;
-      right: unset;
+      right: 50px;
+      width: 18ch;
       padding: 4rem 2rem;
     }
     ul {
@@ -89,10 +91,13 @@ nav {
       width: 40px;
     }
     .social-icons {
-      margin-top: 2rem;
+      margin: 2rem 0;
       a {
         padding-right: 1rem;
       }
+    }
+    .gdpr {
+      font-size: 32px;
     }
   }
 }
@@ -100,3 +105,156 @@ nav {
 .hidden {
   display: none;
 }
+
+.cornered {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    a {
+      text-decoration: none;
+      font-family: 'Apoc Revelations Italic';
+      font-size: 2rem;
+      padding: .5rem 1rem;
+      box-shadow: $box-shadow;
+      border-radius: 15px;
+    }
+    li:first-child {
+      position: absolute;
+      top: 5%;
+      left: 37%;
+      @include respond-to('large') {
+        top: 30px;
+        left: 30px;
+        z-index: 5;
+      }
+      a {
+        color: $grey;
+        border: 2px solid $grey;
+      }
+    }
+    li:nth-child(2) {
+      position: absolute;
+      top: 18%;
+      right: 17%;
+      @include respond-to('large') {
+        top: 30px;
+        right: 30px;
+        z-index: 5;
+      }
+      a {
+        color: $pink;
+        border: 2px solid $pink;
+      }
+    }
+    li:nth-child(3) {
+      position: absolute;
+      top: 75%;
+      left: 35%;
+      @include respond-to('large') {
+        top: unset;
+        left: 30px;
+        bottom: 30px;
+        z-index: 5;
+      }
+      a {
+        color: $red;
+        border: 2px solid $red;
+      }
+    }
+    li:nth-child(4) {
+      position: absolute;
+      top: 88%;
+      right: 31%;
+      @include respond-to('large') {
+        top: unset;
+        right: 30px;
+        bottom: 30px;
+        z-index: 5;
+      }
+      a {
+        color: $mint;
+        border: 2px solid $mint;
+      }
+    }
+  }
+}
+
+#home {
+  .cornered {
+    @include respond-to('large') {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+#about-link {
+  right: 37%;
+  @include respond-to('large') {
+    right: 30px;
+  }
+}
+
+#map {
+  .cornered a {
+    background: $light-map;
+    color: $dark-map;
+    border: 2px solid $dark-map;
+  }
+}
+
+#volcano {
+  .cornered a {
+    background: $light-volcano;
+    color: $dark-volcano;
+    border: 2px solid $dark-volcano;
+  }
+}
+
+#anatomy {
+  .cornered a {
+    background: $light-anatomy;
+    color: $dark-anatomy;
+    border: 2px solid $dark-anatomy;
+  }
+}
+
+#current-affairs {
+  .cornered a {
+    background: $light-affairs;
+    color: $dark-affairs;
+    border: 2px solid $dark-affairs;
+  }
+}
+
+#leaking-bodies {
+  .cornered a {
+    background: $light-bodies;
+    color: $dark-bodies;
+    border: 2px solid $dark-bodies;
+  }
+}
+
+#red-tent {
+  .cornered a {
+    background: $dark-tent;
+    color: $light-tent;
+    border: 2px solid $light-tent;
+  }
+}
+
+
+#cycles {
+  .cornered a {
+    background: $light-cycles;
+    color: $dark-cycles;
+    border: 2px solid $dark-cycles;
+  }
+}
+
+

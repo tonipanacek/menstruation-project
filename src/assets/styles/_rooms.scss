@@ -1,0 +1,604 @@
+@keyframes zoomAndTwistIn {
+  0% {
+    transform: scale(0) translateX(-100%);
+  }
+  100%{
+    transform: scale(1) translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOther {
+  0% {
+    transform: scale(0) translateX(100%);
+  }
+  100%{
+    transform: scale(1) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn ease 2s;
+}
+.fade-out {
+  animation: fadeOut ease 2s;
+}
+
+.main {
+  height: 100vh;
+  .room {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .artist-info {
+    font-family: 'Apoc Light';
+    .title {
+      font-family: "Apoc Revelations Italic";
+      font-size: 1.5rem;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  .text {
+    font-size: 1.2rem;
+  }
+  .content {
+    padding: 2rem;
+    border-radius: 15px;
+    width: 66ch;
+    box-shadow: $box-shadow;
+    font-size: 1.35rem;
+    animation: zoomAndTwistIn 1s ease-out forwards;
+    z-index: 100;
+    margin: 1rem;
+    &-big {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: unset;
+    }
+  }
+
+  .art-content {
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: $box-shadow;
+    font-size: 1.35rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 95vh;
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      img {
+        width: 35px;
+        cursor: pointer;
+      }
+    }
+    .media-content, .after-content, .one-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      z-index: 2;
+    }
+  }
+
+  .left {
+    align-self: flex-start;
+  }
+
+  .room-box {
+    height: 17vh;
+    width: 17vh;
+    .watch {
+      cursor: pointer;
+      border-radius: 50%;
+      font-family: "Apoc Light";
+      font-size: 1.5rem;
+      padding: 1rem;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 2s linear;
+      animation: fadeIn ease 1s;
+    }
+  }
+}
+#info-box {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 10vh;
+  height: 10vh;
+  .watch {
+    font-family: 'Apoc Revelations Italic';
+  }
+}
+
+// CURRENT AFFAIRS
+.main-current-affairs {
+  .content {
+    background: $light-affairs;
+    color: $dark-affairs;
+    border: 2px solid $dark-affairs;
+  }
+  .room-box {
+    .watch {
+      border: 2px solid $dark-affairs;
+      color: $dark-affairs;
+      background: $light-affairs;
+    }
+  }
+  .area-1 {
+    position: absolute;
+    top: 4%;
+    left: 30%;
+  }
+  .area-2 {
+    position: absolute;
+    top: 13%;
+    left: 20%;
+  }
+  .area-3 {
+    position: absolute;
+    top: 25%;
+    left: 7%;
+  }
+  .area-4 {
+    position: absolute;
+    top: 45%;
+    left: 25%;
+  }
+  .area-5 {
+    position: absolute;
+    bottom: 30%;
+    right: 34%;
+    &-content {
+      width: 60ch;
+    }
+  }
+  .area-6 {
+    position: absolute;
+    bottom: 45%;
+    right: 11%;
+  }
+  .area-7 {
+    position: absolute;
+    top: 25%;
+    right: 48%;
+    &-content {
+      width: 45ch;
+    }
+  }
+}
+
+
+
+// ANATOMY
+
+.main-anatomy {
+  .content {
+    background: $light-anatomy;
+    color: $dark-anatomy;
+    border: 2px solid $dark-anatomy;
+  }
+  .room-box {
+    .watch {
+      border: 2px solid $dark-anatomy;
+      color: $dark-anatomy;
+      background: $light-anatomy;
+    }
+  }
+  .area-1 {
+   position: absolute;
+   right: 18%;
+   top: 47%;
+  }
+  .area-2 {
+   position: absolute;
+   top: 15%;
+   left: 36%;
+  }
+  .area-3 {
+   position: absolute;
+   left: 15%;
+   bottom: 17%;
+  }
+  .area-4 {
+   position: absolute;
+   bottom: 11%;
+   left: 46%;
+   &-content {
+    width: 45ch;
+   }
+  }
+}
+
+// LEAKING BODIES
+
+.main-leaking-bodies {
+  .content {
+    background: $light-bodies;
+    color: $dark-bodies;
+    border: 2px solid $dark-bodies;
+  }
+  .room-box {
+    .watch {
+      border: 2px solid $dark-bodies;
+      color: $dark-bodies;
+      background: $light-bodies;
+    }
+  }
+  .area-1 {
+   position: absolute;
+   left: 39%;
+   top: 19%;
+   &-content {
+    width: 55ch;
+   }
+  }
+  .area-2 {
+   position: absolute;
+   top: 41%;
+   left: 13%;
+  }
+  .area-3 {
+   position: absolute;
+   left: 38%;
+   bottom: 13%;
+   &-content {
+    width: 55ch;
+   }
+  }
+  .area-4 {
+   position: absolute;
+   bottom: 22%;
+   right: 16%;
+  }
+  .area-5 {
+    position: absolute;
+    right: 26%;
+    top: 17%;
+  }
+}
+
+// RED TENT
+
+.main-red-tent {
+  .content {
+    background: $dark-tent;
+    color: $light-tent;
+    border: 2px solid $light-tent;
+  }
+  .room-box {
+    .watch {
+      border: 2px solid $light-tent;
+      color: $light-tent;
+      background: $dark-tent;
+    }
+  }
+  .area-1 {
+   position: absolute;
+   left: 8%;
+   bottom: 27%;
+  }
+  .area-2 {
+   position: absolute;
+   bottom: 33%;
+   left: 27%;
+  }
+  .area-3 {
+   position: absolute;
+   left: 46%;
+   bottom: 34%;
+   &-content {
+      width: 40%;
+   }
+  }
+  .area-4 {
+   position: absolute;
+   bottom: 31%;
+   right: 27%;
+  }
+  .area-5 {
+    position: absolute;
+    right: 10%;
+    bottom: 24%;
+  }
+}
+
+// VOLCANO
+
+.main-volcano {
+  .content {
+    background: $dark-volcano;
+    color: $light-volcano;
+    border: 2px solid $light-volcano;
+  }
+  .room-box {
+    .watch {
+      border: 2px solid $light-volcano;
+      color: $light-volcano;
+      background: $dark-volcano;
+    }
+  }
+  .area-1 {
+   position: absolute;
+   left: 20%;
+   bottom: 26%;
+  }
+  .area-2 {
+   position: absolute;
+   top: 23%;
+   left: 42%;
+   &-content {
+    width: 50ch;
+   }
+  }
+  .area-3 {
+   position: absolute;
+   right: 26%;
+   bottom: 32%;
+  }
+  .area-4 {
+   position: absolute;
+   bottom: 17%;
+   right: 47%;
+   &-content {
+    width: 45ch;
+   }
+  }
+}
+
+// CYCLES
+
+.main-cycles {
+  .content {
+    background: $light-cycles;
+    color: $dark-cycles;
+    border: 2px solid $dark-cycles;
+  }
+  .room-box {
+    .watch {
+      border: 2px solid $dark-cycles;
+      color: $dark-cycles;
+      background: $light-cycles;
+    }
+  }
+  .area-1 {
+   position: absolute;
+   left: 7%;
+   top: 40%;
+  }
+  .area-2 {
+   position: absolute;
+   top: 40%;
+   left: 25%;
+  }
+  .area-3 {
+   position: absolute;
+   left: 40%;
+   top: 40%;
+   &-content {
+    width: 45%;
+   }
+  }
+  .area-4 {
+   position: absolute;
+   top: 40%;
+   right: 39%;
+   &-content {
+    width: 45%;
+   }
+  }
+  .area-5 {
+   position: absolute;
+   top: 40%;
+   right: 25%;
+  }
+  .area-6 {
+   position: absolute;
+   top: 40%;
+   right: 7%;
+  }
+}
+
+// MAP
+.main-map {
+  .mobile-view {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 33%;
+    .text-content {
+      width: 80%;
+      padding: 1rem;
+      font-size: 24px;
+      font-family: 'Apoc Light';
+      background: $grey;
+      color: $purple;
+      border: 2px solid $purple;
+      border-radius: 15px;
+      text-align: center;
+    }
+    @include respond-to('large') {
+      display: none;
+    }
+  }
+  .room {
+    display: none;
+    @include respond-to('large') {
+      display: flex;
+    }
+  }
+  .content {
+    padding: .75rem 1.25rem;
+    width: auto;
+    // background: $light-map;
+    // color: $dark-map;
+    // border: 2px solid $dark-map;
+    font-family: "Apoc Light";
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    animation: zoomIn 1s ease-out forwards ;
+  }
+  .area-volcano {
+    position: absolute;
+    top: 34%;
+    left: 18%;
+    width: 20vh;
+    height: 20vh;
+    &-content {
+      position: absolute;
+      top: 25%;
+      left: 9%;
+      background: $dark-volcano;
+      color: $light-volcano;
+      border: 2px solid $light-volcano;
+    }
+  }
+  .area-affairs {
+    position: absolute;
+    width: 20vh;
+    height: 20vh;
+    top: 24%;
+    left: 41%;
+    &-content {
+      position: absolute;
+      top: 10%;
+      left: 40%;
+      background: $light-affairs;
+      color: $dark-affairs;
+      border: 2px solid $dark-affairs;
+    }
+  }
+  .area-anatomy {
+    position: absolute;
+    width: 20vh;
+    height: 20vh;
+    top: 24%;
+    right: 30%;
+    &-content {
+      position: absolute;
+      top: 19%;
+      right: 20%;
+      background: $light-anatomy;
+      color: $dark-anatomy;
+      border: 2px solid $dark-anatomy;
+    }
+  }
+  .area-tent {
+    position: absolute;
+    width: 20vh;
+    height: 20vh;
+    right: 16%;
+    top: 43%;
+    &-content {
+      position: absolute;
+      right: 4%;
+      top: 38%;
+      background: $dark-tent;
+      color: $light-tent;
+      border: 2px solid $light-tent;
+    }
+  }
+  .area-directory {
+    position: absolute;
+    width: 20vh;
+    height: 20vh;
+    bottom: 20%;
+    right: 22%;
+    &-content {
+      position: absolute;
+      bottom: 15%;
+      right: 13%;
+      // background: $light-directory;
+      // color: $dark-directory;
+      // border: 2px solid $dark-directory;
+    }
+  }
+  .area-cycles {
+    position: absolute;
+    width: 20vh;
+    height: 20vh;
+    bottom: 21%;
+    right: 41%;
+    &-content {
+      position: absolute;
+      bottom: 10%;
+      right: 35%;
+      background: $light-cycles;
+      color: $dark-cycles;
+      border: 2px solid $dark-cycles;
+    }
+  }
+  .area-bodies {
+    position: absolute;
+    width: 20vh;
+    height: 20vh;
+    bottom: 24%;
+    left: 28%;
+    &-content {
+      position: absolute;
+      left: 15%;
+      bottom: 16%;
+      background: $light-bodies;
+      color: $dark-bodies;
+      border: 2px solid $dark-bodies;
+    }
+  }
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
