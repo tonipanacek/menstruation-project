@@ -12,7 +12,10 @@
 }
 
 #home .main {
-  height: 90vh;
+  height: 93vh;
+  @include respond-to('large') {
+    height: 90vh;
+  }
 }
 
 .main-home {
@@ -21,13 +24,21 @@
   align-items: center;
   flex-direction: column;
   .main-logo {
-    width: 30vw;
-    position: sticky;
-    top: 22%;
+    position: absolute;
+    top: 27%;
+    width: 70%;
+    @include respond-to('large') {
+      width: 30vw;
+      position: sticky;
+      top: 22%;
+    }
   }
   .social-icons {
-    position: fixed;
-    top: 30px;
+    position: absolute;
+    top: 42%;
+    @include respond-to('large') {
+      top: 30px;
+    }
     display: flex;
     width: 20ch;
     justify-content: space-around;
@@ -50,7 +61,10 @@
 }
 
 footer {
-  height: 20vh;
+  height: 35vh;
+  @include respond-to('large') {
+    height: 20vh;
+  }
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,7 +79,7 @@ footer {
     a {
       color: $mint;
       text-decoration: none;
-      font-size: 28px;
+      font-size: 20px;
       padding: .25rem .75rem;
       border: 2px solid $mint;
       border-radius: 15px;
@@ -76,9 +90,15 @@ footer {
   .sponsors {
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-between;
-    width: 65ch;
-    margin-top: 1rem;
+    height: 18vh;
+    @include respond-to('large') {
+      flex-direction: row;
+      width: 65ch;
+      margin-top: 1rem;
+      height: auto;
+    }
     img:first-child {
       width: 200px;
     }
