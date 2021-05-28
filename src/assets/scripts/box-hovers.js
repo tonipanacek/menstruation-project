@@ -13,8 +13,12 @@ const initAudio = () => {
   }
 }
 
-const initVimeo = (vimeoID, divID, content) => {
-  audio.pause();
+const initVimeo = (hoverBtn, divID, content) => {
+  const vimeoID = hoverBtn.dataset.vimeo;
+  const music = hoverBtn.dataset.music;
+  if (music !== 'true') {
+    audio.pause();
+  }
   const mediaDiv = content.querySelector('.media-content');
   const videoName = divID;
   const player = new Player(mediaDiv, {
@@ -22,10 +26,6 @@ const initVimeo = (vimeoID, divID, content) => {
     autoplay: true,
     controls: false
   });
-
-  console.log(player.element);
-
-  const iframe = content.querySelector('iframe');
   const afterContent = content.querySelector('.after-content');
 
   player.on('play', () => {
@@ -69,15 +69,16 @@ const onCardClick = (e) => {
   const divID = parentRoomBox.classList[1];
   const content = document.querySelector(`.${divID}-art-piece`);
   const vimeoID = hoverBtnDiv.dataset.vimeo;
+  const music = hoverBtnDiv.dataset.music;
   const imagePath = hoverBtnDiv.dataset.imagePath;
   let closeBtn;
   let player;
   if (content) {
     if (vimeoID) {
-      player = initVimeo(vimeoID, divID, content);
+      player = initVimeo(hoverBtnDiv, divID, content);
     } else if (imagePath) {
       const baseClUrl = "https://res.cloudinary.com/tonipanoche/image/upload/q_auto,f_auto,dpr_auto/menstruation-project/"
-      const imageHTML = `<img class="one-image" src="${baseClUrl + imagePath}.jpg" alt="">`;
+      const imageHTML = `<img class="one-image" src="${baseClUrl + imagePath}" alt="">`;
       const existingImage = content.querySelector('.one-image');
       if (!existingImage) {
         content.lastElementChild.insertAdjacentHTML('beforeend', imageHTML);
@@ -87,8 +88,12 @@ const onCardClick = (e) => {
     if (player) {
       player.getPaused().then((paused) => {
         if (paused) {
-          audio.pause();
-          player.play();
+          if (music) {
+            player.play();
+          } else {
+            audio.pause();
+            player.play();
+          }
         }
       })
     }
