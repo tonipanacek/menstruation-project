@@ -2,13 +2,22 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  height: 77vh;
+  flex-direction: column-reverse;
   width: 80%;
   margin: 0 auto;
+  @include respond-to('large') {
+    flex-direction: row;
+    height: 77vh;
+  }
   .image-box {
     height: 100%;
+    width: 95%;
     img {
-      height: 100%;
+      width: 100%;
+      @include respond-to('large') {
+        width: auto;
+        height: 100%;
+      }
     }
   }
   .text-box {
@@ -17,11 +26,19 @@
     color: $grey;
     border: 2px solid $mint;
     border-radius: 15px;
-    min-height: 80%;
-    width: 33ch;
     padding: 1rem 3rem;
     text-align: center;
+    width: 95%;
+    margin: 0 auto;
+    @include respond-to('large') {
+      width: 33ch;
+      min-height: 80%;
+    }
     .title {
+      margin-top: 0;
+      @include respond-to('large') {
+        margin-top: 1em;
+      }
       font-family: 'Apoc Revelations Italic';
     }
     .links-section {

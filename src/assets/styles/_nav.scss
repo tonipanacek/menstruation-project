@@ -148,6 +148,7 @@
       top: 70%;
       left: 35%;
       @include respond-to('large') {
+        top: unset;
         left: 30px;
         bottom: 30px;
         z-index: 5;
@@ -162,6 +163,7 @@
       top: 83%;
       right: 31%;
       @include respond-to('large') {
+        top: unset;
         right: 30px;
         bottom: 30px;
         z-index: 5;
