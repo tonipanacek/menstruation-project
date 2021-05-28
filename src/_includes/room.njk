@@ -2,7 +2,7 @@
 
 {% block main %}
   {% if mainClass == 'map' %}
-    <nav class="cornered">
+  <nav class="cornered">
     <ul>
       <li><a href="/" class="home-btn">MP</a></li>
       <li><a href="/about">about</a></li>
@@ -10,6 +10,7 @@
       <li><a href="/connect">connect</a></li>
     </ul>
   </nav>
+  <audio src="" class="bg-sound"></audio>
   {% else %}
     <nav class="cornered">
       <ul>
@@ -17,6 +18,7 @@
         <li><a href="/rooms/map">meta-view</a></li>
       </ul>
     </nav>
+    <audio src="" class="bg-sound"></audio>
   {% endif %}
   {% if entryVideo %}
   <div class="bg-video" id="entry-video">

@@ -17,7 +17,7 @@
 }
 
 
-.main-imprint, .main-privacy {
+.main-about, .main-imprint, .main-privacy {
   border: 2px solid $grey;
   border-radius: 15px;
   .content {
@@ -25,3 +25,13 @@
     word-break: break-word;
   }
 }
+
+// .main-about {
+//   border: 2px solid $grey;
+//   border-radius: 15px;
+//   .content {
+//     padding: 2rem;
+//     word-break: break-word;
+//   }
+// }
+

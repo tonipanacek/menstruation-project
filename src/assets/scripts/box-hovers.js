@@ -2,6 +2,16 @@ import Player from '@vimeo/player';
 
 const room = document.querySelector('.room');
 const boxes = document.querySelectorAll('.room-box');
+const audio = document.querySelector('audio');
+
+const initAudio = () => {
+  const pageName = document.body.id;
+  const baseSrc = 'https://res.cloudinary.com/tonipanoche/video/upload/menstruation-project';
+  if (audio) {
+    audio.src = `${baseSrc}/sound-${pageName}.mp3`;
+    audio.play();
+  }
+}
 
 const initVimeo = (vimeoID, divID, content) => {
   const videoName = divID;
@@ -10,6 +20,7 @@ const initVimeo = (vimeoID, divID, content) => {
     autoplay: true,
     controls: false
   });
+  audio.pause();
 
   player.on('ended', () => {
     console.log('video ended')
@@ -49,7 +60,7 @@ const onCardClick = (e) => {
     if (vimeoID) {
       player = initVimeo(vimeoID, divID, content);
     } else if (imagePath) {
-      const baseClUrl = "https://res.cloudinary.com/tonipanoche/image/upload/q_auto,dpr_auto,w_auto,f_auto/v1622148106/menstruation-project/"
+      const baseClUrl = "https://res.cloudinary.com/tonipanoche/image/upload/q_auto,f_auto,dpr_auto/menstruation-project/"
       const imageHTML = `<img class="one-image" src="${baseClUrl + imagePath}" alt="">`;
       const existingImage = content.querySelector('.one-image');
       if (!existingImage) {
@@ -59,7 +70,10 @@ const onCardClick = (e) => {
     content.classList.remove('hidden');
     if (player) {
       player.getPaused().then((paused) => {
-        if (paused) { player.play()}
+        if (paused) {
+          audio.pause();
+          player.play();
+        }
       })
     }
     closeBtn = content.querySelector('.close');
@@ -67,6 +81,7 @@ const onCardClick = (e) => {
       content.classList.add('hidden');
       if (player) {
         player.pause();
+        audio.play();
       }
     })
   }
@@ -74,6 +89,7 @@ const onCardClick = (e) => {
 
 const handleBoxHovers = () => {
   if (room) {
+    initAudio();
     boxes.forEach(box => {
       box.addEventListener('mouseover', (e) => {
         showInfoBoxes(box);
