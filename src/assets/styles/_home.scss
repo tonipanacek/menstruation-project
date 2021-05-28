@@ -26,6 +26,12 @@
     top: 22%;
   }
   .social-icons {
+    position: fixed;
+    top: 30px;
+    display: flex;
+    width: 20ch;
+    justify-content: space-around;
+    align-items: center;
     a {
       color: $pink;
       text-decoration: none;
@@ -36,8 +42,6 @@
       border-radius: 15px;
       box-shadow: $box-shadow;
     }
-    position: fixed;
-    top: 30px;
     img {
       height: 30px;
       width: 30px;
