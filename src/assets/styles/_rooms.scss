@@ -264,9 +264,9 @@
 
 .main-red-tent {
   .content {
-    background: $light-tent;
-    color: $dark-tent;
-    border: 2px solid $dark-tent;
+    background: $dark-tent;
+    color: $light-tent;
+    border: 2px solid $light-tent;
   }
   .room-box {
     .watch {
