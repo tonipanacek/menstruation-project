@@ -8003,6 +8003,11 @@ tfunk@^4.0.0:
     chalk "^1.1.3"
     dlv "^1.1.3"
 
+three-dots@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/three-dots/-/three-dots-0.2.1.tgz#489e9dcac541a10f3507cdf27917ee0801cb0f44"
+  integrity sha512-+zRdWo1jsIRv6mq49gI7GeGyf28tTT+W5lWwm8qtizy4etIgXiv9GiF/PzpqpXxxDucAf2Xp9fKh5+iowQ5j3Q==
+
 through2@^2.0.0:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/through2/-/through2-2.0.5.tgz#01c1e39eb31d07cb7d03a96a70823260b23132cd"

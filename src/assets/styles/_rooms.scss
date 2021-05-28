@@ -1,9 +1,18 @@
-@keyframes zoomIn {
+@keyframes zoomAndTwistIn {
   0% {
     transform: scale(0) translateX(-100%);
   }
   100%{
     transform: scale(1) translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
     opacity: 1;
   }
 }
@@ -18,6 +27,31 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn ease 2s;
+}
+.fade-out {
+  animation: fadeOut ease 2s;
+}
+
 .main {
   height: 100vh;
   .room {
@@ -26,7 +60,6 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    // padding: 0 5rem;
   }
   .artist-info {
     font-family: 'Apoc Light';
@@ -47,7 +80,7 @@
     width: 66ch;
     box-shadow: $box-shadow;
     font-size: 1.35rem;
-    animation: zoomIn 0.5s ease-out forwards;
+    animation: zoomAndTwistIn 1s ease-out forwards;
     z-index: 100;
     margin: 1rem;
     &-big {
@@ -59,6 +92,7 @@
       width: unset;
     }
   }
+
   .art-content {
     padding: 3rem;
     border-radius: 15px;
@@ -83,10 +117,11 @@
         cursor: pointer;
       }
     }
-    .one-image {
+    .media-content, .after-content, .one-image {
       width: 100%;
       height: 100%;
       object-fit: contain;
+      z-index: 2;
     }
   }
 
@@ -109,7 +144,21 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 2s linear;
+      animation: fadeIn ease 1s;
     }
+  }
+}
+#info-box {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 10vh;
+  height: 10vh;
+  .watch {
+    font-family: 'Apoc Revelations Italic';
   }
 }
 
@@ -406,12 +455,13 @@
   .content {
     padding: .75rem 1.25rem;
     width: auto;
-    background: $light-map;
-    color: $dark-map;
-    border: 2px solid $dark-map;
+    // background: $light-map;
+    // color: $dark-map;
+    // border: 2px solid $dark-map;
     font-family: "Apoc Light";
     text-transform: uppercase;
     font-size: 1.5rem;
+    animation: zoomIn 1s ease-out forwards ;
   }
   .area-volcano {
     position: absolute;
@@ -423,6 +473,9 @@
       position: absolute;
       top: 25%;
       left: 9%;
+      background: $dark-volcano;
+      color: $light-volcano;
+      border: 2px solid $light-volcano;
     }
   }
   .area-affairs {
@@ -435,6 +488,9 @@
       position: absolute;
       top: 10%;
       left: 40%;
+      background: $light-affairs;
+      color: $dark-affairs;
+      border: 2px solid $dark-affairs;
     }
   }
   .area-anatomy {
@@ -447,6 +503,9 @@
       position: absolute;
       top: 19%;
       right: 20%;
+      background: $light-anatomy;
+      color: $dark-anatomy;
+      border: 2px solid $dark-anatomy;
     }
   }
   .area-tent {
@@ -459,6 +518,9 @@
       position: absolute;
       right: 4%;
       top: 38%;
+      background: $dark-tent;
+      color: $light-tent;
+      border: 2px solid $light-tent;
     }
   }
   .area-directory {
@@ -471,6 +533,9 @@
       position: absolute;
       bottom: 15%;
       right: 13%;
+      // background: $light-directory;
+      // color: $dark-directory;
+      // border: 2px solid $dark-directory;
     }
   }
   .area-cycles {
@@ -483,6 +548,9 @@
       position: absolute;
       bottom: 10%;
       right: 35%;
+      background: $light-cycles;
+      color: $dark-cycles;
+      border: 2px solid $dark-cycles;
     }
   }
   .area-bodies {
@@ -495,6 +563,15 @@
       position: absolute;
       left: 15%;
       bottom: 16%;
+      background: $light-bodies;
+      color: $dark-bodies;
+      border: 2px solid $dark-bodies;
     }
   }
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }

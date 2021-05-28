@@ -14,16 +14,32 @@ const initAudio = () => {
 }
 
 const initVimeo = (vimeoID, divID, content) => {
+  audio.pause();
+  const mediaDiv = content.querySelector('.media-content');
   const videoName = divID;
-  const player = new Player(content, {
+  const player = new Player(mediaDiv, {
     id: vimeoID,
     autoplay: true,
     controls: false
   });
-  audio.pause();
+
+  console.log(player.element);
+
+  const iframe = content.querySelector('iframe');
+  const afterContent = content.querySelector('.after-content');
+
+  player.on('play', () => {
+    content.querySelector('.loading').style.zIndex = -1;
+  })
 
   player.on('ended', () => {
-    console.log('video ended')
+    if (afterContent) {
+      mediaDiv.classList.add('fade-out');
+      setTimeout(() => {
+        mediaDiv.classList.add('hidden'), 2000;
+        afterContent.classList.remove('hidden');
+      });
+    }
   })
   return player;
 }
@@ -61,10 +77,10 @@ const onCardClick = (e) => {
       player = initVimeo(vimeoID, divID, content);
     } else if (imagePath) {
       const baseClUrl = "https://res.cloudinary.com/tonipanoche/image/upload/q_auto,f_auto,dpr_auto/menstruation-project/"
-      const imageHTML = `<img class="one-image" src="${baseClUrl + imagePath}" alt="">`;
+      const imageHTML = `<img class="one-image" src="${baseClUrl + imagePath}.jpg" alt="">`;
       const existingImage = content.querySelector('.one-image');
       if (!existingImage) {
-        content.insertAdjacentHTML('beforeend', imageHTML);
+        content.lastElementChild.insertAdjacentHTML('beforeend', imageHTML);
       }
     }
     content.classList.remove('hidden');
