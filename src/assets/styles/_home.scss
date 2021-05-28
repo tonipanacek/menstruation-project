@@ -12,7 +12,7 @@
 }
 
 #home .main {
-  height: 93vh;
+  height: 97vh;
   @include respond-to('large') {
     height: 90vh;
   }
@@ -35,7 +35,7 @@
   }
   .social-icons {
     position: absolute;
-    top: 42%;
+    top: 45%;
     @include respond-to('large') {
       top: 30px;
     }
