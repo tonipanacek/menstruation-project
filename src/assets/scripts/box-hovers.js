@@ -57,7 +57,7 @@ const hideInfoBoxes = (box) => {
   const area = box.classList[1];
   const content = document.querySelector(`.${area}-content`);
   content.classList.add('hidden');
-  if (button && box.id !== 'info-box') {
+  if (button && !box.classList.contains('info-box')) {
     button.classList.add('hidden');
   }
 }
