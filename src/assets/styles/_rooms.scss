@@ -348,6 +348,59 @@
   }
 }
 
+// CYCLES
+
+.main-cycles {
+  .content {
+    background: $light-cycles;
+    color: $dark-cycles;
+    border: 2px solid $dark-cycles;
+  }
+  .room-box {
+    .watch {
+      border: 2px solid $dark-cycles;
+      color: $dark-cycles;
+      background: $light-cycles;
+    }
+  }
+  .area-1 {
+   position: absolute;
+   left: 7%;
+   top: 40%;
+  }
+  .area-2 {
+   position: absolute;
+   top: 40%;
+   left: 25%;
+  }
+  .area-3 {
+   position: absolute;
+   left: 40%;
+   top: 40%;
+   &-content {
+    width: 45%;
+   }
+  }
+  .area-4 {
+   position: absolute;
+   top: 40%;
+   right: 39%;
+   &-content {
+    width: 45%;
+   }
+  }
+  .area-5 {
+   position: absolute;
+   top: 40%;
+   right: 25%;
+  }
+  .area-6 {
+   position: absolute;
+   top: 40%;
+   right: 7%;
+  }
+}
+
 // MAP
 .main-map {
   .content {

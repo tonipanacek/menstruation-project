@@ -49,7 +49,7 @@ const onCardClick = (e) => {
     if (vimeoID) {
       player = initVimeo(vimeoID, divID, content);
     } else if (imagePath) {
-      const baseClUrl = "https://res.cloudinary.com/tonipanoche/image/upload/v1622148106/menstruation-project/"
+      const baseClUrl = "https://res.cloudinary.com/tonipanoche/image/upload/q_auto,dpr_auto,w_auto,f_auto/v1622148106/menstruation-project/"
       const imageHTML = `<img class="one-image" src="${baseClUrl + imagePath}" alt="">`;
       const existingImage = content.querySelector('.one-image');
       if (!existingImage) {

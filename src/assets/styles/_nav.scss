@@ -208,3 +208,13 @@
   }
 }
 
+
+#cycles {
+  .cornered a {
+    background: $light-cycles;
+    color: $dark-cycles;
+    border: 2px solid $dark-cycles;
+  }
+}
+
+
