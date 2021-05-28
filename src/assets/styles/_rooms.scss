@@ -156,15 +156,16 @@
 }
 #map-info-box {
   position: absolute;
-  top: 50%;
-  right: 30px;
-  width: 10vh;
-  height: 10vh;
+  top: 30px;
+  right: 155px;
+  width: 5vh;
+  height: 5vh;
   .watch {
     font-family: 'Apoc Revelations Italic';
     background: $light-map;
     color: $dark-map;
     border: 2px solid $dark-map;
+    box-shadow: $box-shadow;
   }
 }
 
