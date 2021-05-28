@@ -29,7 +29,7 @@ const initVimeo = (hoverBtn, divID, content) => {
   const afterContent = content.querySelector('.after-content');
 
   player.on('play', () => {
-    content.querySelector('.loading').style.zIndex = -1;
+    content.querySelector('.loading').style.visibility = 'hidden';
   })
 
   player.on('ended', () => {
