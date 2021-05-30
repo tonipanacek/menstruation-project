@@ -257,4 +257,12 @@
   }
 }
 
+#directory {
+  .cornered a {
+    background: $light-directory;
+    color: $dark-directory;
+    border: 2px solid $dark-directory;
+  }
+}
+
 
