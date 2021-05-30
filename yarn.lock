@@ -1208,6 +1208,11 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
+a-simple-slider@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/a-simple-slider/-/a-simple-slider-1.3.4.tgz#535d055975d86bbbf99ba545a45176799537b9c5"
+  integrity sha512-aPqEVHzsrlIL98lQR26T9ctLeOSFcZR8EF9jMwzv8Pc0ZeEO/irKYTWE48poeueNOI6z85wBwtviP5nX+AOIlA==
+
 a-sync-waterfall@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/a-sync-waterfall/-/a-sync-waterfall-1.0.1.tgz#75b6b6aa72598b497a125e7a2770f14f4c8a1fa7"

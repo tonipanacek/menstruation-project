@@ -37,6 +37,13 @@ $light-map: rgb(231, 224, 234);
 $dark-cycles: rgb(85, 3, 0);
 $light-cycles: rgb(252, 182, 219);
 
+//directory
+$light-content: #ECE1EC;
+$dark-content: #A18CFF;
+$header-bg: #E6C0E8;
+$dark-mint: #82C1AD;
+$dark-directory: $light-content;
+$light-directory: $dark-mint;
 
 
 $box-shadow: 2px 2px 5px 1px rgb(141, 141, 141);

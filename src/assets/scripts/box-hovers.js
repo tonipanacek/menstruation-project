@@ -1,4 +1,5 @@
 import Player from '@vimeo/player';
+import SimpleSlider from "a-simple-slider";
 
 const room = document.querySelector('.room');
 const boxes = document.querySelectorAll('.room-box');
@@ -48,6 +49,12 @@ const showInfoBoxes = (box) => {
   const button = box.querySelector('.btn-watch');
   const area = box.classList[1];
   const content = document.querySelector(`.${area}-content`);
+  const slider = content.querySelector('#slider');
+  if (slider) {
+    SimpleSlider.init({
+        element: slider
+    });
+  }
   content.classList.remove('hidden');
   if (button) button.classList.remove('hidden');
 }
