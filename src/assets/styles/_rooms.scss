@@ -495,10 +495,24 @@
    top: 40%;
    right: 7%;
   }
-  #slider img {
+  .scroll-more {
+    position: absolute;
+    top: 10px;
+    font-family: 'Apoc Revelations Italic';
+  }
+  #slider {
     width: 100%;
     height: 100%;
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    scroll-snap-type: y mandatory;
+    img {
+      scroll-snap-align: start;
+      width: 100%;
+      flex-shrink: 0;
+      height: 100%;
+    }
   }
 }
 
