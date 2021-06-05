@@ -1,5 +1,4 @@
 import Player from '@vimeo/player';
-import SimpleSlider from "a-simple-slider";
 
 const room = document.querySelector('.room');
 const boxes = document.querySelectorAll('.room-box');
@@ -50,11 +49,6 @@ const showInfoBoxes = (box) => {
   const area = box.classList[1];
   const content = document.querySelector(`.${area}-content`);
   const slider = content.querySelector('#slider');
-  if (slider) {
-    SimpleSlider.init({
-        element: slider
-    });
-  }
   content.classList.remove('hidden');
   if (button) button.classList.remove('hidden');
 }
@@ -83,7 +77,7 @@ const onCardClick = (e) => {
     if (vimeoID) {
       player = initVimeo(hoverBtnDiv, divID, content);
     } else if (imagePath) {
-      const baseClUrl = "https://res.cloudinary.com/tonipanoche/image/upload/q_auto,f_auto,dpr_auto/menstruation-project/"
+      const baseClUrl = "https://res.cloudinary.com/tonipanoche/image/upload/q_auto,f_auto,dpr_auto"
       const imageHTML = `<img class="one-image" src="${baseClUrl + imagePath}" alt="">`;
       const existingImage = content.querySelector('.one-image');
       if (!existingImage) {
