@@ -259,9 +259,9 @@
 
 #directory {
   .cornered a {
-    background: $light-directory;
-    color: $dark-directory;
-    border: 2px solid $dark-directory;
+    background: $dark-directory;
+    color: $light-directory;
+    border: 2px solid $light-directory;
   }
 }
 

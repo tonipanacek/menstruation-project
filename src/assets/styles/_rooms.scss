@@ -735,6 +735,28 @@
       animation: squeeze 0.5s ease-out;
     }
   }
+
+  .btn-dir-watch {
+    padding: .25rem .75rem;
+    margin-left: 2rem;
+    color: $light-directory;
+    background: $dark-directory;
+    border: 2px solid $light-directory;
+    cursor: pointer;
+    border-radius: 15px;
+    font-family: "Apoc Light";
+    font-size: 1.5rem;
+    text-transform: lowercase;
+    text-align: center;
+    &:hover {
+      animation: squeeze 0.5s ease-out;
+    }
+  }
+  .dir-video {
+    width: auto;
+    background: $dark-directory;
+    border: 2px solid $light-directory;
+  }
   .content-section {
     max-height: 50ch;
     max-width: 150ch;

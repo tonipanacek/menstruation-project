@@ -3,6 +3,7 @@ import Player from '@vimeo/player';
 const room = document.querySelector('.room');
 const boxes = document.querySelectorAll('.room-box');
 const audio = document.querySelector('audio');
+const dirWatchBtn = document.querySelector('.btn-dir-watch');
 
 const initAudio = () => {
   const pageName = document.body.id;
@@ -89,10 +90,10 @@ const onCardClick = (e) => {
       player.getPaused().then((paused) => {
         if (paused) {
           if (music) {
-            player.play();
+            setTimeout(() => player.play(), 1000);
           } else {
             audio.pause();
-            player.play();
+            setTimeout(() => player.play(), 1000);
           }
         }
       })
@@ -103,6 +104,39 @@ const onCardClick = (e) => {
       if (player) {
         player.pause();
         audio.play();
+      }
+    })
+  }
+}
+
+const showDirectoryVideo = (e) => {
+  const dirVideo = document.querySelector('.dir-video');
+  const vimeoID = dirVideo.dataset.vimeo;
+
+  const mediaDiv = dirVideo.querySelector('.media-content');
+  const videoName = dirVideo.id;
+  const player = new Player(mediaDiv, {
+    id: vimeoID,
+    autoplay: true,
+    controls: false
+  });
+
+  player.on('play', () => {
+    dirVideo.querySelector('.loading').style.visibility = 'hidden';
+  })
+
+  const closeBtn = dirVideo.querySelector('.close');
+  closeBtn.addEventListener('click', () => {
+    dirVideo.classList.add('hidden');
+    player.pause();
+    audio.play();
+  })
+  dirVideo.classList.remove('hidden');
+  audio.pause();
+  if (player) {
+    player.getPaused().then((paused) => {
+      if (paused) {
+        setTimeout(() => player.play(), 1000);
       }
     })
   }
@@ -120,6 +154,9 @@ const handleBoxHovers = () => {
       });
       box.addEventListener('click', onCardClick);
     })
+    if (dirWatchBtn) {
+      dirWatchBtn.addEventListener('click', showDirectoryVideo)
+    }
   }
 }
 
