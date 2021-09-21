@@ -19,17 +19,17 @@ Live demo https://eleventy-webpack.netlify.app
 First install the dependencies:
 
 ```sh
-npm install
+yarn install
 ```
 
 Then you can:
 
 | Command               | Description                                  |
 | --------------------- | -------------------------------------------- |
-| **`npm run start`**   | Run your website on http://localhost:8080    |
-| **`npm run build`**   | Build your production website inside `/dist` |
-| **`npm run format`**  | Run prettier on all filles except `/dist`    |
-| **`npm run analyze`** | Output info on your bundle size              |
+| **`yarn start`**   | Run your website on http://localhost:8080    |
+| **`yarn build`**   | Build your production website inside `/dist` |
+| **`yarn format`**  | Run prettier on all filles except `/dist`    |
+| **`yarn analyze`** | Output info on your bundle size              |
 
 That's it.
 
