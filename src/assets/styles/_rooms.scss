@@ -668,6 +668,41 @@
       border: 2px solid $dark-bodies;
     }
   }
+
+  footer {
+    position: absolute;
+    bottom: 27%;
+    left: 0;
+    right: 0;
+    height: 12vh;
+    @include respond-to('large') {
+      bottom: 0;
+      padding-bottom: 0px;
+      height: 14vh;
+    }
+    .sponsors {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 18vh;
+      @include respond-to('large') {
+        flex-direction: row;
+        width: 65ch;
+        margin-top: 1rem;
+        height: auto;
+      }
+      img:first-child {
+        width: 200px;
+      }
+      img:nth-child(2) {
+        height: 50px;
+      }
+      img:nth-child(3) {
+        width: 200px;
+      }
+    }
+  }
 }
 
 @keyframes squeeze {
