@@ -25,7 +25,7 @@ const initVimeo = (hoverBtn, divID, content) => {
   const player = new Player(mediaDiv, {
     id: vimeoID,
     autoplay: true,
-    controls: false
+    controls: true
   });
   const afterContent = content.querySelector('.after-content');
 

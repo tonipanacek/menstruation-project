@@ -61,9 +61,9 @@
 }
 
 footer {
-  height: 35vh;
+  height: 13vh;
   @include respond-to('large') {
-    height: 20vh;
+    height: 10vh;
   }
   display: flex;
   flex-direction: column;
@@ -76,6 +76,7 @@ footer {
     align-items: center;
     justify-content: space-around;
     width: 40ch;
+    z-index: 5;
     a {
       color: $mint;
       text-decoration: none;
@@ -85,28 +86,6 @@ footer {
       border-radius: 15px;
       box-shadow: $box-shadow;
       font-family: 'Apoc Revelations Italic';
-    }
-  }
-  .sponsors {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 18vh;
-    @include respond-to('large') {
-      flex-direction: row;
-      width: 65ch;
-      margin-top: 1rem;
-      height: auto;
-    }
-    img:first-child {
-      width: 200px;
-    }
-    img:nth-child(2) {
-      height: 50px;
-    }
-    img:nth-child(3) {
-      width: 200px;
     }
   }
 }
