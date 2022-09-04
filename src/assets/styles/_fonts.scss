@@ -25,6 +25,16 @@
   font-display: block;
 }
 
+@font-face {
+  font-family: "NeueBit";
+  src: url("/assets/fonts/NeueBit-Regular.woff") format("woff"),
+       url("/assets/fonts/NeueBit-Regular.otf") format("otf"),
+       url("/assets/fonts/NeueBit-Regular.ttf") format("ttf");
+  font-style: normal;
+  font-weight: 300;
+  font-display: block;
+}
+
 
 .apoc-light {
   font-family: 'Apoc Light';
