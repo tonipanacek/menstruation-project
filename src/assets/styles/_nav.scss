@@ -1,12 +1,16 @@
 .main-nav {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
-  padding: 2rem 0;
+  padding: 1rem;
   flex-wrap: wrap;
   @include respond-to('small') {
     flex-wrap: nowrap;
+  }
+  @include respond-to('large') {
+    padding: 2rem 0;
+    justify-content: space-around;
   }
   .box {
     text-align: center;
@@ -25,8 +29,12 @@
     }
   }
   .box:nth-child(3) {
-    @include respond-to('large') {
+    svg { width: 50px; }
+    @include respond-to('medium') {
       position: relative;
+      svg {
+        width: unset;
+      }
     }
   }
   .home-btn {
@@ -34,11 +42,17 @@
   }
   h1 {
     font-family: 'Apoc Light';
-    font-size: 80px;
+    font-size: 60px;
     font-weight: unset;
     color: $mint;
     margin: 0;
-    padding: 0;
+    padding: 10px 15px;
+    border-radius: 30px;
+    border: 2px solid $mint;
+    @include respond-to('large') {
+      font-size: 80px;
+      padding: 15px 25px;
+    }
   }
   h2 {
     font-family: 'Apoc Revelations Italic';
@@ -68,11 +82,12 @@
     border-radius: 15px;
     text-align: left;
     box-shadow: $box-shadow;
-    right: 0;
-    top: 145px;
+    right: 15px;
+    top: 110px;
     z-index: 2;
+    width: 15ch;
     @include respond-to('large') {
-      top: 160px;
+      top: 110px;
       right: 50px;
       width: 18ch;
       padding: 4rem 2rem;
@@ -85,6 +100,9 @@
     a {
       text-decoration: none;
       color: $pink;
+      &:hover {
+        text-decoration: underline;
+      }
     }
     img {
       height: 40px;
@@ -265,4 +283,32 @@
   }
 }
 
+.landing {
+  .main-nav { align-items: start; }
+  .box:nth-child(1) {
+    justify-content: start;
+    margin-left: 5%;
+    h1 {
+      color: black;
+      border: 2px solid black;
+      @include respond-to('medium') {
+        padding: 15px 25px;
+        font-size: 110px;
+        border-radius: 45px;
+      }
+    }
+  }
+  .box:nth-child(3) {
+    justify-content: end;
+    margin-right: 2%;
+  }
+
+  .menu {
+    a { color: white; }
+    background: black;
+    .social-icons {
+      color: $mint;
+    }
+  }
+}
 
