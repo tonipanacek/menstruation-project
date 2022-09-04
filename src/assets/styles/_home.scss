@@ -52,7 +52,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 5;
+  z-index: 3;
   @include respond-to('small') {
     bottom: 30px;
   }
