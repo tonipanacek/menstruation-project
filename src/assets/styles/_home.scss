@@ -1,20 +1,7 @@
-@keyframes rotating {
-  from{
-      transform: rotate(0deg);
-  }
-  to{
-      transform: rotate(360deg);
-  }
-}
-
-.rotating {
-  animation: rotating 10s linear infinite;
-}
-
 #home .main {
-  height: 97vh;
-  @include respond-to('large') {
-    height: 90vh;
+  height: 100vh;
+  @include respond-to('small') {
+    overflow: hidden;
   }
 }
 
@@ -23,69 +10,63 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  .main-logo {
-    position: absolute;
-    top: 27%;
-    width: 70%;
-    @include respond-to('large') {
-      width: 30vw;
-      position: sticky;
-      top: 22%;
-    }
-  }
   .social-icons {
     position: absolute;
-    top: 45%;
-    @include respond-to('large') {
-      top: 30px;
-    }
+    top: 30%;
     display: flex;
-    width: 20ch;
     justify-content: space-around;
     align-items: center;
-    a {
-      color: $pink;
-      text-decoration: none;
-      font-family: 'Apoc Revelations Italic';
-      font-size: 35px;
-      padding: .25rem .75rem;
-      border: 2px solid $pink;
-      border-radius: 15px;
-      box-shadow: $social-shadow;
+    z-index: 5;
+    @include respond-to('small') {
+      top: 30px;
     }
-    img {
-      height: 30px;
-      width: 30px;
+    a {
+      color: white;
+      text-decoration: none;
+      font-family: 'Apoc Light';
+      font-size: 25px;
+      &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+      }
+      &:first-child {
+        margin-right: 15px;
+      }
+    }
+  }
+  .home-logo {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    @include respond-to('small') {
+      height: 100%;
+      width: unset;
+      position: unset;
     }
   }
 }
 
 footer {
-  height: 13vh;
-  @include respond-to('large') {
-    height: 10vh;
-  }
+  position: absolute;
+  bottom: 30%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  padding-bottom: 20px;
-  .gdpr {
-    color: $mint;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 40ch;
-    z-index: 5;
-    a {
-      color: $mint;
-      text-decoration: none;
-      font-size: 20px;
-      padding: .25rem .75rem;
-      border: 2px solid $mint;
-      border-radius: 15px;
-      box-shadow: $box-shadow;
-      font-family: 'Apoc Revelations Italic';
+  justify-content: center;
+  z-index: 5;
+  @include respond-to('small') {
+    bottom: 30px;
+  }
+  a {
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Apoc Light';
+    color: white;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+    }
+     &:first-child {
+      margin-right: 15px;
     }
   }
 }
