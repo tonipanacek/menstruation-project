@@ -563,6 +563,13 @@
       text-transform: none;
     }
   }
+  .explore-info {
+    position: absolute;
+    top: 30px;
+    .text {
+      font-size: 1rem;
+    }
+  }
   .area-volcano {
     position: absolute;
     top: 34%;
