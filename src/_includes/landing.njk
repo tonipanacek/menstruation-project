@@ -1,0 +1,8 @@
+{% extends './default.njk' %}
+
+{% block main %}
+  {% include './header.njk' %}
+  <main class="main-{{ mainClass }} content">
+    {{ content | safe }}
+  </main>
+{% endblock %}
