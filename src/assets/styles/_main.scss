@@ -47,7 +47,7 @@ body {
   overflow: hidden;
 }
 .landing {
-  // background-image: url("https://res.cloudinary.com/tonipanoche/image/upload/w_auto,dpr_auto,q_auto/v1662299717/menstruation-project/landing.png");
+  // background-image: url("/assets/images/desktop_lead_no_text.png");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,37 +56,56 @@ body {
     background-size: cover;
   }
   .main-landing {
-    margin-top: -155px;
+    margin-top: -190px;
   }
   .lead-image {
     background-image: url("/assets/images/desktop_lead_image.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
   }
 
   .main-content {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     font-family: "NeueBit";
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 2rem;
   }
   .section-title {
     font-family: "tuppence";
     font-style: italic;
     font-weight: lighter;
-    font-size: 2.5rem;
+    font-size: 3rem;
     border-bottom: 1px solid black;
   }
   .flex {
     display: flex;
     align-items: start;
-    justify-content: space-betweem;
-    > * {
-      flex: 1;
+    justify-content: space-between;
+    p:first-child, .socials {
+      max-width: 20ch;
+      font-size: 3rem;
     }
+    .socials a {
+      color: black;
+      text-decoration: none;
+      display: block;
+      &:first-child {
+        margin-top: 65px;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .big-text {
+    font-size: 5rem;
+    text-align: right;
+    line-height: 4rem;
+    margin: 60px 0;
   }
 }
 
