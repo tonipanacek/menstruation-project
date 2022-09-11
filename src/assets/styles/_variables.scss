@@ -9,41 +9,55 @@ $mauve: rgb(219, 191, 229);
 $orange: rgb(255, 161, 65);
 
 // anatomy
-$dark-anatomy: rgb(104, 101, 54);
-$light-anatomy: rgb(194, 208, 191);
+// $dark-anatomy: rgb(104, 101, 54);
+// $light-anatomy: rgb(194, 208, 191);
+$dark-anatomy: black;
+$light-anatomy: white;
 
 // current affairs
-$dark-affairs: rgb(130, 112, 182);
-$light-affairs: rgb(231, 224, 234);
+// $dark-affairs: rgb(130, 112, 182);
+// $light-affairs: rgb(231, 224, 234);
+$dark-affairs: black;
+$light-affairs: white;
 
 // leaking bodies
-$dark-bodies: rgb(193, 75, 37);
-$light-bodies: rgb(224, 216, 229);
+// $dark-bodies: rgb(193, 75, 37);
+// $light-bodies: rgb(224, 216, 229);
+$dark-bodies: black;
+$light-bodies: white;
 
 // red tent
 // $dark-tent: rgb(85, 3, 0);
-$dark-tent: rgb(150, 3, 0);;
-$light-tent: rgb(255, 233, 172);
+// $dark-tent: rgb(150, 3, 0);
+// $light-tent: rgb(255, 233, 172);
+$dark-tent: black;
+$light-tent: white;
 
 // volcano
-$dark-volcano: rgb(130, 112, 182);
-$light-volcano: rgb(219, 191, 229);
+// $dark-volcano: rgb(130, 112, 182);
+// $light-volcano: rgb(219, 191, 229);
+$dark-volcano: black;
+$light-volcano: white;
 
 // map
-$dark-map: rgb(150, 3, 0);
-$light-map: rgb(231, 224, 234);
+// $dark-map: rgb(150, 3, 0);
+// $light-map: rgb(231, 224, 234);
+$dark-map: black;
+$light-map: white;
 
 // cycles
-$dark-cycles: rgb(85, 3, 0);
-$light-cycles: rgb(252, 182, 219);
+// $dark-cycles: rgb(85, 3, 0);
+// $light-cycles: rgb(252, 182, 219);
+$dark-cycles: black;
+$light-cycles: white;
 
 //directory
 $light-content: #ECE1EC;
 $dark-content: #A18CFF;
 $header-bg: #E6C0E8;
 $dark-mint: #82C1AD;
-$light-directory: $light-content;
-$dark-directory: $dark-mint;
+$light-directory: white;
+$dark-directory: black;
 
 
 $box-shadow: 2px 2px 5px 1px rgb(141, 141, 141);

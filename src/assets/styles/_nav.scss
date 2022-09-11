@@ -133,17 +133,17 @@
     margin: 0;
     a {
       text-decoration: none;
-      font-family: 'Apoc Revelations Italic';
-      font-size: 2rem;
+      font-family: 'NeueBit';
+      font-size: 4rem;
       color: white;
       border-radius: 15px;
-      box-shadow: $box-shadow;
       padding: .5rem 1rem;
     }
     li:first-child {
       position: absolute;
       top: 20%;
       left: 15%;
+      a { font-family: "Apoc Light"; }
       @include respond-to('small') {
         top: 30px;
         left: 30px;

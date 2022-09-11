@@ -96,7 +96,7 @@
     padding: 2rem;
     border-radius: 15px;
     width: 66ch;
-    box-shadow: $box-shadow;
+    // box-shadow: $box-shadow;
     font-size: 1.35rem;
     animation: zoomAndTwistIn 1s ease-out forwards;
     z-index: 100;
@@ -182,8 +182,8 @@
 
 #map-info-box {
   position: absolute;
-  top: 30px;
-  right: 155px;
+  top: 45px;
+  right: 180px;
   width: 5vh;
   height: 5vh;
   .watch {
@@ -191,7 +191,6 @@
     background: $light-map;
     color: $dark-map;
     border: 2px solid $dark-map;
-    box-shadow: $box-shadow;
   }
 }
 
