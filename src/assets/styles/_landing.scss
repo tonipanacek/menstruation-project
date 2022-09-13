@@ -182,7 +182,7 @@
   }
   .big-text {
     font-size: 3rem;
-    @include-respond-to('medium') {
+    @include respond-to('medium') {
       font-size: 5rem;
       line-height: 4rem;
     }
