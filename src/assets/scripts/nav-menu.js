@@ -11,15 +11,15 @@ const handleHamburgerMenu = () => {
 
 const updateLandingNavbar = () => {
   const logo = document.querySelector('.home-btn h1');
-  const nav = document.querySelector('.landing-nav');
+  const landingNav = document.querySelector('#landing .landing-nav');
 
-  if (nav) {
+  if (landingNav) {
     window.addEventListener('scroll', () => {
-      if (window.scrollY >= window.innerHeight - 100) {
-        nav.classList.add('bg-white');
+      if (window.scrollY >= window.innerHeight - 150) {
+        landingNav.classList.add('bg-white');
         logo.classList.add('smaller-logo');
       } else {
-        nav.classList.remove('bg-white');
+        landingNav.classList.remove('bg-white');
         logo.classList.remove('smaller-logo');
       }
     })

@@ -7,12 +7,32 @@
   }
 }
 
+#tickets  {
+  header {
+    z-index: 1000000000;
+    background: white;
+    .landing-nav h1 {
+      @include respond-to('mediium') {
+        font-size: 75px;
+        border-radius: 35px;
+      }
+    }
+  }
+  .main-tickets {
+    padding: 0px 25px;
+  }
+}
+
 .landing-nav {
   display: flex;
   padding: 25px;
   padding-bottom: 0;
   z-index: 1;
   transition: 0.5s background-color ease;
+  background: white;
+  @include respond-to('medium') {
+    background: transparent;
+  }
   &.bg-white {
     background: white;
   }
@@ -22,17 +42,15 @@
 
   h1 {
     font-family: 'Apoc Light';
-    font-size: 60px;
+    font-size: 75px;
     font-weight: unset;
     color: black;
     margin: 0;
     padding: 10px 15px;
-    border-radius: 30px;
+    border-radius: 35px;
     border: 2px solid black;
     transition: 0.5s font-size ease;
     @include respond-to('medium') {
-      // font-size: 80px;
-      // padding: 15px 25px;
       padding: 15px 25px;
       font-size: 110px;
       border-radius: 45px;
@@ -44,15 +62,24 @@
   }
   ul {
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     list-style: none;
     flex-grow: 1;
     justify-content: space-between;
+    @include respond-to('medium') {
+      flex-direction: row;
+      align-items: flex-start;
+    }
     a {
       color: black;
       text-transform: uppercase;
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-family: "NeueBit";
       text-decoration: none;
+      @include respond-to('medium') {
+        font-size: 2.5rem;
+      }
       &:hover {
         text-decoration: underline;
       }
@@ -96,27 +123,40 @@
   }
 
   .main-content {
+    padding: 0 25px;
     max-width: 1000px;
     margin: 0 auto;
     font-family: "NeueBit";
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
     z-index: 3;
     > div {
-      scroll-margin-top: 50px;
+      scroll-margin-top: 250px;
       position: relative;
+    }
+    @include respond-to('medium') {
+      font-size: 3rem;
+      > div {
+        scroll-margin-top: 100px;
+      }
+      #info {
+        scroll-margin-top: 110px;
+      }
     }
   }
   .section-title {
     font-family: "tuppence";
     font-style: italic;
     font-weight: lighter;
-    font-size: 3rem;
+    font-size: 2rem;
     border-bottom: 1px solid black;
     scroll-margin-top: 25px;
     position: sticky;
     top: 130px;
     background: white;
+    @include respond-to('medium') {
+      font-size: 3rem;
+    }
   }
   .flex-center {
     display: flex;
@@ -129,17 +169,23 @@
     justify-content: space-between;
   }
   .socials a {
-    font-size: 3rem;
+    font-size: 2rem;
     color: black;
     text-decoration: none;
     display: block;
     &:hover {
       text-decoration: underline;
     }
+    @include respond-to('medium') {
+      font-size: 3rem;
+    }
   }
   .big-text {
-    font-size: 5rem;
-    line-height: 4rem;
+    font-size: 3rem;
+    @include-respond-to('medium') {
+      font-size: 5rem;
+      line-height: 4rem;
+    }
   }
   .text-right {
     text-align: right;
