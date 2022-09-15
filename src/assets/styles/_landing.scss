@@ -190,4 +190,36 @@
   .text-right {
     text-align: right;
   }
+
+  footer {
+    max-width: 500px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    small {
+      color: #7d7d7d;
+      letter-spacing: 1px;
+    }
+    .flex-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .img-wrapper {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+    }
+    #ti {
+      width: 300px;
+    }
+    #hfk {
+      width: 75px;
+    }
+  }
+}
+
+#accessibility {
+  border-bottom: 1px solid black;
 }
