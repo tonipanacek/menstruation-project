@@ -15,7 +15,7 @@ const updateLandingNavbar = () => {
 
   if (landingNav) {
     window.addEventListener('scroll', () => {
-      if (window.scrollY >= window.innerHeight - 150) {
+      if (window.scrollY >= window.innerHeight - 200) {
         landingNav.classList.add('bg-white');
         logo.classList.add('smaller-logo');
       } else {

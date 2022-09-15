@@ -135,7 +135,7 @@
       position: relative;
     }
     @include respond-to('medium') {
-      font-size: 3rem;
+      font-size: 2.5rem;
       > div {
         scroll-margin-top: 100px;
       }
@@ -152,10 +152,10 @@
     border-bottom: 1px solid black;
     scroll-margin-top: 25px;
     position: sticky;
-    top: 130px;
+    top: 135px;
     background: white;
     @include respond-to('medium') {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
   .flex-center {
@@ -177,14 +177,14 @@
       text-decoration: underline;
     }
     @include respond-to('medium') {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
   .big-text {
     font-size: 3rem;
     @include respond-to('medium') {
-      font-size: 5rem;
-      line-height: 4rem;
+      font-size: 4rem;
+      line-height: 3.5rem;
     }
   }
   .text-right {
