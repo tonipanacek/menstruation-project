@@ -10,6 +10,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -46,16 +47,13 @@ body {
 .noscroll {
   overflow: hidden;
 }
-.landing {
-  background-image: url("https://res.cloudinary.com/tonipanoche/image/upload/w_auto,dpr_auto,q_auto/v1662299717/menstruation-project/landing.png");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  @include respond-to('large') {
-    background-size: cover;
-  }
+
+
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
+
 .home {
   background-image: url("https://res.cloudinary.com/tonipanoche/image/upload/v1622220724/menstruation-project/mp_home_page_image-min_1.jpg");
   background-attachment: fixed;

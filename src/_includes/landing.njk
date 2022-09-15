@@ -1,8 +1,10 @@
 {% extends './default.njk' %}
 
 {% block main %}
-  {% include './header.njk' %}
-  <main class="main-{{ mainClass }} content">
-    {{ content | safe }}
-  </main>
+  <div class="landing-container">
+    {% include './sticky_header.njk' %}
+    <main class="main-{{ mainClass }} content">
+      {{ content | safe }}
+    </main>
+  </div>
 {% endblock %}

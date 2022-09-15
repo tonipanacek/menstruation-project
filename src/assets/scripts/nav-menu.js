@@ -1,4 +1,4 @@
-const handleNavMenu = () => {
+const handleHamburgerMenu = () => {
   const hamburger = document.querySelector('.menu-btn');
   const menu = document.querySelector('.menu');
 
@@ -9,4 +9,21 @@ const handleNavMenu = () => {
   }
 }
 
-export { handleNavMenu }
+const updateLandingNavbar = () => {
+  const logo = document.querySelector('.home-btn h1');
+  const landingNav = document.querySelector('#landing .landing-nav');
+
+  if (landingNav) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY >= window.innerHeight - 200) {
+        landingNav.classList.add('bg-white');
+        logo.classList.add('smaller-logo');
+      } else {
+        landingNav.classList.remove('bg-white');
+        logo.classList.remove('smaller-logo');
+      }
+    })
+  }
+}
+
+export { handleHamburgerMenu, updateLandingNavbar }
