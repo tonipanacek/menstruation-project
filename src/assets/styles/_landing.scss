@@ -77,7 +77,7 @@
       font-size: 2rem;
       font-family: "NeueBit";
       text-decoration: none;
-      @include respond-to('medium') {
+      @include respond-to('large') {
         font-size: 2.5rem;
       }
       &:hover {
@@ -137,10 +137,10 @@
     @include respond-to('medium') {
       font-size: 2.5rem;
       > div {
-        scroll-margin-top: 100px;
+        scroll-margin-top: 120px;
       }
       #info {
-        scroll-margin-top: 110px;
+        scroll-margin-top: 130px;
       }
     }
   }
@@ -157,6 +157,17 @@
     @include respond-to('medium') {
       font-size: 2.5rem;
     }
+  }
+  .date {
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+  .event-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    p:first-child { max-width: 700px }
   }
   .flex-center {
     display: flex;
